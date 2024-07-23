@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Страница вина - характеристики</title>
+    </head>
+    <body>
+    <h1>Вино: {{ wine.id }}</h1>
+    <p>Фиксированная кислотность: {{ wine.fixed_acidity }}</p>
+    <p>Летучая кислотность: {{ wine.volatile_acidity }}</p>
+    <p>Лимонная кислота: {{ wine.critic_acid }}</p>
+    <p>Остаточный сахар: {{ wine.residual_sugar }}</p>
+    <p>Хлориды: {{ wine.chlorides }}</p>
+    <p>Свободный диоксид серы: {{ wine.free_sulfur_dioxide }}</p>
+    <p>Общий диоксид серы: {{ wine.total_sulfur_dioxide }}</p>
+    <p>Плотность: {{ wine.density }}</p>
+    <p>Водородный показатель: {{ wine.pH }}</p>
+    <p>Сульфаты: {{ wine.sulphates }}</p>
+    <p>Алкоголь: {{ wine.alcohol }}</p>
+    <p>Оценка: {{ wine.quality }}</p>
+
+    <input type="submit" value="Удалить" onclick="location.href='/delete?id={{wine.id}}'">
+    <input type="submit" value="Редактировать" onclick="location.href='/edit?id={{wine.id}}'">
+    <input type="submit" value="Назад" onclick="location.href='/index'">
+    <input type="submit" value="Оценить качество вина" onclick="location.href='/quality?id={{wine.id}}'">
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Страница вина - характеристики</title>
+    </head>
+    <body>
+        {% block content %}
+        <h1>Редактирование характеристик</h1>
+        <form action="" method="post" novalidate>
+            <input type="hidden" name="WineId" value={{form.id}}>
+            <p>
+                {{ form.fixed_acidity.label }}<br>
+                {{ form.fixed_acidity(size=32) }}
+            </p>
+            <p>
+                {{ form.volatile_acidity.label }}<br>
+                {{ form.volatile_acidity(size=32)}}
+            </p>
+            <p>
+                {{ form.critic_acid.label }}<br>
+                {{ form.critic_acid(size=32) }}
+            </p>
+            <p>
+                {{ form.residual_sugar.label }}<br>
+                {{ form.residual_sugar(size=32) }}
+            </p>
+            <p>
+                {{ form.chlorides.label }}<br>
+                {{ form.chlorides(size=32) }}
+            </p>
+            <p>
+                {{ form.free_sulfur_dioxide.label }}<br>
+                {{ form.free_sulfur_dioxide(size=32) }}
+            </p>
+            <p>
+                {{ form.total_sulfur_dioxide.label }}<br>
+                {{ form.total_sulfur_dioxide(size=32) }}
+            </p>
+            <p>
+                {{ form.density.label }}<br>
+                {{ form.density(size=32) }}
+            </p>
+            <p>
+                {{ form.pH.label }}<br>
+                {{ form.pH(size=32) }}
+            </p>
+            <p>
+                {{ form.sulphates.label }}<br>
+                {{ form.sulphates(size=32) }}
+            </p>
+            <p>
+                {{ form.alcohol.label }}<br>
+                {{ form.alcohol(size=32) }}
+            </p>
+            <p>
+                {{ form.quality.label }}<br>
+                {{ form.quality(size=32) }}
+            </p>
+            <p>{{ form.submit }}</p>
+        </form>
+        {% endblock %}
+    <input type="submit" value="Назад" onclick="location.href='/index'">
+    </body>
+</html>

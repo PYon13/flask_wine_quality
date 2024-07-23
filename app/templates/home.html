@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page - Предсказание качества вина</title>
+</head>
+<body>
+    <h1>Характеристики вин</h1>
+    <input type="submit" value="Предсказать качество вина" onclick="location.href='/predictions'">
+    <input type="submit" value="Создать" onclick="location.href='/edit'">
+    {% for w in wines %}
+    <div>
+        <hr>
+        <form method="post" action="/wines">
+            <input type='hidden' name='WineId' value="{{w.id}}">
+            <p><b>Идентификатор вина: {{ w.id }}</b></p>
+            <p>Алкоголь: {{ w.alcohol }}</p>
+            <p>Оценка: {{ w.quality }}</p>
+            <input type='submit' value='Посмотреть характеристики'>
+        </form>
+    </div>
+    {% endfor %}
+</body>
+</html>
